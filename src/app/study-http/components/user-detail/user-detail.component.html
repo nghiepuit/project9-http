@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">User Detail</h3>
+    </div>
+    <div class="panel-body">
+        <template [ngIf]="user != null">
+            <h4><span class="label label-info">ID</span> {{ user.id }}</h4>
+            <h4><span class="label label-danger">FullName</span> {{ user.fullname }}</h4>
+            <h4><span class="label label-success">Username</span> {{ user.username }}</h4>
+            <h4><span class="label label-primary">Email</span> {{ user.email }}</h4>
+            <h4><span class="label label-info">Staff Title</span> {{ user.stafftitle }}</h4>
+            <h4><span class="label label-danger">Sales Org.</span> {{ user.salesorg }}</h4>
+            <h4><span class="label label-success">User Role</span> {{ user.userrole }}</h4>
+            <h4><span class="label label-primary">Status</span> {{ user.status }}</h4>
+        </template>
+        <template [ngIf]="user == null">
+            <h3>Loading...</h3>
+        </template>
+    </div>
+    <div class="panel-footer">
+        <button type="button" class="btn btn-danger" (click)="backToUserList()">Back User List</button>
+    </div>
+</div>
